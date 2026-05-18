@@ -1,0 +1,203 @@
+/* Navigation Bar Styling */
+.navbar {
+  background-color: rgba(26, 26, 26, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 10px 5%;
+  position: fixed; /* Keeps it at the top while scrolling */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays above the background */
+}
+
+.nav-logo img {
+  height: 50px; /* Adjust based on your logo size */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.nav-links li {
+  padding: 0 20px;
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+/* Dropdown Menu Logic */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(26, 26, 26, 0.9);
+  min-width: 180px;
+  top: 100%;
+  left: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* This removes the default invisible frame the browser puts around everything */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevents accidental side-scrolling */
+}
+.contact-container {
+  /* This is where you paste your direct link from PostImages */
+  background-image: url('https://i.postimg.cc/4ySSc4Xs/Untitled-design-5.png'); 
+  
+  background-size: cover;       /* Makes it bleed to the edges */
+  background-position: center;  /* Keeps the mountains centered */
+  background-repeat: no-repeat;
+  min-height: 100vh;           /* Fills the whole screen height */
+  
+  display: flex;               /* These three lines center your text box */
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-box {
+  background: rgba(26, 26, 26, 0.9); /* This adds a frosty white overlay so you can read the text */
+  color: white; padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+.background-container {
+  background-image: url('https://i.postimg.cc/MGJVTkJM/Untitled-design-2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; 
+  width: 100vw; /* Using vw (viewport width) ensures it ignores parent limits */
+  margin-left: calc(50% - 50vw); /* Force it to stretch if it's inside a restricted div */
+}
+
+.home-button {
+  /* Positioning */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+
+  /* Look and Feel */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: #007bff; /* Bright blue for visibility */
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 50px; /* Rounded pill shape */
+  
+  /* Shadow for depth */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Subtle lift on hover */
+}
+
+.home-button svg {
+  stroke: white;
+}
+.corporate-footer {
+  background: #0d1117; /* Solid deep charcoal anchor at base */
+  color: #8b949e;
+  padding: 60px 40px 30px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #67B6C8; /* Muted brand cyan tint */
+}
+
+.footer-links-group {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-column h4 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.footer-column a {
+  color: #8b949e;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #74CDA5; /* Highlights to logo green on hover */
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  font-size: 0.8rem;
+}

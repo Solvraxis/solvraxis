@@ -1,0 +1,223 @@
+:root 
+
+
+
+/* THE BACKGROUND BLEED */
+html, body {
+margin: 0;
+padding: 0;
+height: 100%;
+}
+body {
+min-height: 100vh;
+font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+color: #333;
+background-image: url("https://i.postimg.cc/fyrR0sGz/Untitled-design-3.png");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+background-attachment: fixed;
+background-color: rgba(0,0,0,0.25);
+background-blend-mode: multiply;}
+
+/* THE FLOATING DOCUMENT */
+.legal-container {
+  max-width: 900px;
+  background: var(--glass);
+  backdrop-filter: blur(15px);
+  border-radius: 4px; /* Sharper corners = more professional */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 80px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.legal-header {
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.brand-tag {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin: 10px 0;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.revision-meta {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--secondary);
+}
+
+/* TABLE OF CONTENTS */
+.table-of-contents {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+.table-of-contents h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  color: var(--secondary);
+}
+
+.toc-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.toc-links a {
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+}
+
+.toc-links a:hover {
+  border-bottom: 1px solid var(--accent);
+}
+
+/* CONTENT SECTIONS */
+section {
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.section-num {
+  font-family: monospace;
+  color: var(--secondary);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+.jargon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.jargon-item {
+  border-top: 1px solid var(--border);
+  padding-top: 15px;
+}
+
+.jargon-item h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.jargon-item p {
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+blockquote {
+  margin: 30px 0;
+  padding: 30px;
+  background: #f1f5f9;
+  border-left: 5px solid var(--accent);
+  font-size: 0.95rem;
+}
+
+.legal-notice {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.legal-footer {
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.copyright 
+
+/* Responsive */
+@media (max-width: 768px) {
+  .legal-container { padding: 40px 20px; }
+  .jargon-grid { grid-template-columns: 1fr; }
+}
+
+
+
+.home-button {
+  /* Positioning */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+
+  /* Look and Feel */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: #007bff; /* Bright blue for visibility */
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 50px; /* Rounded pill shape */
+  
+  /* Shadow for depth */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Subtle lift on hover */
+}
+
+.home-button svg {
+  stroke: white;
+}
+.table-of-contents {
+background: 
+}
+.toc-links {
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+}
+.toc-links a {
+padding: 10px 16px;
+border-radius: 999px;
+background: rgba(26,26,26,0.08);
+color: #1a1a1a;
+font-size: 0.85rem;
+font-weight: 600;
+text-decoration: none;
+transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+.toc-links a:hover {
+background: rgba(26,26,26,0.15);
+transform: translateY(-1px);
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
