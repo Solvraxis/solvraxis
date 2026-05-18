@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif; /* A clean, modern look */
  /* Your Background Image Settings */
-  background-image: url('https://i.postimg.cc/g2PW1qVQ/IMG-4663.jpg');
+  background-image: url('https://i.postimg.cc/W4G3hMWp/Untitled-design-2.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -15,27 +15,20 @@ body {
 /* Navbar Styling */
 .navbar {
   /* This is a dark grey with 80% transparency */
-  background-color: rgba(26,26,26, 0.9); 
+  background-color: 1px solid rgba(255,255,255, 0.5); 
   backdrop-filter: blur(10px); /* This creates a beautiful "frosted glass" effect */
   
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  height: 60px;
+  height: 50px;
 }
 
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 5%;
-  height: 60px;
-}
-
+ 
 /* Logo Area */
 .logo a {
-  color: #fff;
+  color: #FFF;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
@@ -91,68 +84,174 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.site-footer {
-  background-color: black;
-  color: white;
-  padding: 40px 5%;
-  margin-top: 50px; /* Pushes it away from the content above */
-  font-family: 'Inter', sans-serif;
-  border-top: 1px solid #333; /* Adds a subtle "luxe" divider line */
+
+/* ==========================================================================
+   NEW RESTRUCTURED LAYOUT (With Logo Gradient Kept Intact)
+   ========================================================================== */
+
+/* Page Wrapper to cleanly stack content and push footer to the bottom */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-
-
-
-
-
-
-.site-footer { 
-  /* This is your specific 80% transparent dark grey */
-  background-color: rgba(26, 26, 26, 0.8); 
-  
-  /* This adds the high-end blur effect */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); 
-
-  color: white;
-  padding: 40px 5%;
-  margin-top: 50px;
-  font-family: 'Inter', sans-serif;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* A softer divider for transparency */
-}
-
-.footer-content {
+/* Hero Content Layout with Dark Contrast Shield */
+.hero-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
   justify-content: center;
-  padding: 0;
+  text-align: center;
+  padding: 100px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Glassmorphism Shield to protect text readability over bright images */
+.text-container {
+  background: rgba(13, 17, 23, 0.80); /* Sleek translucent luxury dark tint */
+  padding: 45px 60px;
+  border-radius: 24px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtitle Accent */
+.text-container .subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #74CDA5; /* Clean brand green accent pulled right from your logo */
   margin-bottom: 20px;
-  flex-wrap: wrap; /* Helps it look good on mobile phones */
+  font-weight: 700;
 }
 
-.footer-links li {
-  margin: 0 15px;
+/* Heading with your exact custom logo gradient */
+.text-container h1 {
+  font-size: 2.4rem;
+  line-height: 1.5;
+  font-weight: 300; /* Ultra-modern, premium thin profile */
+  margin: 0;
+  
+  /* Your beautiful logo color path layout */
+  background: linear-gradient(135deg, #A881C8 10%, #74CDA5 45%, #67B6C8 75%, #3A9DB0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.footer-links a {
-  color: #ccc;
+/* Button Group Styling */
+.button-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Capsule Premium Buttons */
+.btn-luxe {
+  display: inline-block;
+  padding: 14px 40px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #3A9DB0;
+  text-decoration: none;
+  background: rgba(13, 17, 23, 0.75); /* Match the text container depth */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px; /* Perfect pill shape */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 160px;
+}
+
+/* Hover State */
+.btn-luxe:hover {
+  background: #ffffff;
+  color: #0d1117; /* High contrast text swap */
+  border-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* ==========================================================================
+   BIG-TEAM CORPORATE FOOTER
+   ========================================================================== */
+.corporate-footer {
+  background: #0d1117; /* Solid deep charcoal anchor at base */
+  color: #8b949e;
+  padding: 60px 40px 30px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #67B6C8; /* Muted brand cyan tint */
+}
+
+.footer-links-group {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-column h4 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.footer-column a {
+  color: #8b949e;
   text-decoration: none;
   font-size: 0.9rem;
-  transition: color 0.3s;
+  transition: color 0.2s ease;
 }
 
-.footer-links a:hover {
-  color: white; /* Brightens when you hover over it */
+.footer-column a:hover {
+  color: #74CDA5; /* Highlights to logo green on hover */
 }
 
-.copyright {
+.footer-bottom {
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
   font-size: 0.8rem;
-  color: #666;
 }
